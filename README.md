@@ -2,11 +2,11 @@
 
 ## General Information
 
-openCMX (Open Compute Module Extended) is a proposed Open Source, standardized, modular form factor and I/O specification for small, scalable, general computing devices.
+openCMX (Open Compute Module Extended) is a proposed Open Source, standardized, modular form factor and I/O specification for small, scalable, system on module computing devices.
 
 **Goals**
 
-The goal of openCMX is to establish an open-source compute module form factor and connection scheme for small low powered devices that allows an individual to use cost effective USB-C hubs and docks to fully operate the module. In addition to this scenario, the user may also use the same module(s) along with 3rd party designed backplanes, to scale the same module(s) to high density clusters. No extra cables, network switches, or power supplies. 
+The goal of openCMX is to establish an open-source system on module form factor and connection scheme for small low powered devices that allows an individual to use cost effective USB-C hubs and docks to fully operate the module. In addition to this scenario, the user may also use the same module(s) along with 3rd party designed backplanes, to scale the same module(s) to high density clusters. No extra cables, network switches, or power supplies. 
 
 Some examples of openCMX usaage:
 
