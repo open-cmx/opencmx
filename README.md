@@ -65,7 +65,7 @@ Each openCMX compliant module must conform to the following physical specificati
 
 - Both USB-C and SFF-8639 connections are to support standard USB based Display Alt Mode (pinout TBA)
 
-- An openCMX module TPD is not to exceed 25w. 
+- An openCMX module total TPD is not to exceed 25w. 
 
 ## Design Concept Illustrations
 - Only required components are shown (excluding SOC)
