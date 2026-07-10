@@ -76,7 +76,7 @@ Each openCMX compliant module must conform to the following physical specificati
 
 **Side B**
 
-![opencmx](https://github.com/eopn-cmx/opencmx/blob/main/openCMX_SideB.png)
+![opencmx](https://github.com/open-cmx/opencmx/blob/main/openCMX_SideB.png)
 
 ## Basic Dimensions
 
