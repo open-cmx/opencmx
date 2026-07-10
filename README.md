@@ -82,3 +82,6 @@ Each openCMX compliant module must conform to the following physical specificati
 
 ![opencmx](https://github.com/open-cmx/opencmx/blob/main/openCMX_BasicDimensions.png)
 
+##SFF-8639 Pin Grouping Visualization - DRAFT##
+
+![opencmx](https://github.com/open-cmx/opencmx/blob/main/openCMX_PinGroupings_DRAFT.png)
