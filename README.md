@@ -6,8 +6,7 @@ openCMX (Open Compute Module Extended) is a proposed Open Source, standardized, 
 
 **Goals**
 
-The goal of openCMX is to establish an open-source system on module form factor and connection scheme for small low powered devices that allows an individual to use cost effective USB-C hubs and docks to fully operate the module. In addition to this scenario, the user may also use the same module(s) along with 3rd party designed backplanes, to scale the same module(s) to high density clusters. No extra cables, network switches, or power supplies. 
-
+The goal of openCMX is to establish an open-source system on module form factor and connection scheme for small low powered devices that allows an individual to use cost effective USB-C hubs and docks to fully operate the module. In addition to this scenario, the user may also use the same module(s) along with 3rd party designed backplanes, to scale the same module(s) to high density clusters.
 Some examples of openCMX usaage:
 
 - Home hobbyist
@@ -21,7 +20,7 @@ Some examples of openCMX usaage:
 
 **Basics**
 
-- The form factor is built upon the [15mm 2.5" U.2 storage physical specifications](https://www.snia.org/forums/cmsi/knowledge/formfactors#u2). This form factor is well established with OEMs and makes use of existing accessories and tooling. 
+- The form factor is built upon the [15mm 2.5" U.2 storage physical specifications](https://www.snia.org/forums/cmsi/knowledge/formfactors#u2). This form factor is well established with OEMs and makes use of existing accessories and chassis tooling. 
 - Primary I/O is dependent on reuse of the U.2 SFF-8639 connector to carry a PCIe x4 connection as well as a USB 3.2 connection for power, peripherals, and display output. The use of this edge connector allows for scalability within high density rack enclosures as well as smaller clusters without the need for external power supplies, network switches, etc. 
 - In conjunction with the SFF-8639 connection, a second USB 3.2 port (USB-C) is used for use with commodity USB-C Hubs. 
 - openCMX modules can be used either as a bare PCB with user customized SoC cooling etc. The module can also reside within an aluminum enclosure doubling as a heatsink. This adds durability and essential heat transfer when in higher density clusters. 
@@ -34,7 +33,7 @@ Some examples of openCMX usaage:
 
 Each openCMX module must include:
 
-- 1x SFF-8639 connector carrying PCIe x4 and USB 3.2 (PD up to 12v, Display-Alt-Mode) [Pinout TBD]
+- 1x SFF-8639 connector carrying PCIe x4 and USB 3.2 (USB Power Delivery Compliant, Display-Alt-Mode) [Pinout TBD]
 - 1x USB-C 3.2 (Mid-Mount) installed adjacent to the SFF-8639 connector
 - 1x 4-Pin JST PWM Fan header [Connector specifications TBD]
 
@@ -60,7 +59,13 @@ Each openCMX compliant module must conform to the following physical specificati
 
 - Applying power to the device either through the USB-C 3.2 or SFF-8639 connector will trigger a boot up sequence with no user interaction. 
 
-- No physical device(s) shall be used to trigger a module power event such as Power On, Power Cycle, etc. 
+- No physical device(s) shall be used to trigger a module power event such as Power On, Power Cycle, etc.
+
+- openCMX module must be powered via USB Power Delivery 9v-20v negotiation based on specific needs. Both the USB-C and SFF-8639 connection can accept USB-PD Input.
+
+- Both USB-C and SFF-8639 connections are to support standard USB based Display Alt Mode (pinout TBA)
+
+- An openCMX module TPD is not to exceed 25w. 
 
 ## Design Concept Illustrations
 - Only required components are shown (excluding SOC)
