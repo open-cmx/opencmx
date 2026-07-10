@@ -25,7 +25,7 @@ Some examples of openCMX usaage:
 - In conjunction with the SFF-8639 connection, a second USB 3.2 port (USB-C) is used for use with commodity USB-C Hubs. 
 - openCMX modules can be used either as a bare PCB with user customized SoC cooling etc. The module can also reside within an aluminum enclosure doubling as a heatsink. This adds durability and essential heat transfer when in higher density clusters. 
 - The user only pays for the I/O they want (USB-C Hubs, Docks, backplanes). Once the user invests in a chassis and I/O, modules can be swapped or upgraded without any physical reconfiguration (cables, power supplies, etc)
-- Conforms to [USB-C Power Delivery specification](https://www.usb.org/document-library/usb-power-delivery) to accept 12v at various USB-C PD profiles. 
+- Conforms to [USB-C Power Delivery specification](https://www.usb.org/document-library/usb-power-delivery) to accept between 9v-20v at various USB-C PD profiles. 
 
 ## Requirements
 
