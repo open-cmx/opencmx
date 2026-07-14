@@ -25,7 +25,7 @@ Some examples of openCMX usaage:
 - In conjunction with the SFF-8639 connection, a second USB 3.2 port (USB-C) is used for use with commodity USB-C Hubs. 
 - openCMX modules can be used either as a bare PCB with user customized SoC cooling etc. The module can also reside within an aluminum enclosure doubling as a heatsink. This adds durability and essential heat transfer when in higher density clusters. 
 - The user only pays for the I/O they want (USB-C Hubs, Docks, backplanes). Once the user invests in a chassis and I/O, modules can be swapped or upgraded without any physical reconfiguration (cables, power supplies, etc)
-- Conforms to [USB-C Power Delivery specification](https://www.usb.org/document-library/usb-power-delivery) to accept between 9v-20v at various USB-C PD profiles. 
+- Conforms to [USB-C Power Delivery specification](https://www.usb.org/document-library/usb-power-delivery) to accept between 5v-20v at various USB-C PD profiles. 
 
 ## Requirements
 
@@ -33,7 +33,7 @@ Some examples of openCMX usaage:
 
 Each openCMX module must include:
 
-- 1x SFF-8639 connector carrying PCIe x4 and USB 3.2 (USB Power Delivery Compliant, Display-Alt-Mode) [Pinout TBD]
+- 1x SFF-8639 connector carrying PCIe x4 and USB 3.2 (USB Power Delivery Compliant, Display-Alt-Mode, and standard data) USB signaling is passed through the SFF-8639 on reassigned SATA/SAS pins. No muxing is done prior to the signal leaving the SFF-8639 connector. [Pinout TBD]
 - 1x USB-C 3.2 (Mid-Mount) installed adjacent to the SFF-8639 connector
 - 1x 4-Pin JST PWM Fan header [Connector specifications TBD]
 
@@ -42,6 +42,10 @@ Each openCMX module must include:
 Each openCMX compliant module must conform to the following physical specifications:
 
 - PCB must fit within an enclosure that conforms to the specifications of a 2.5” u.2 SSD. See “U.2 Mechanical Spec.pdf” for rough external measurements.
+
+- Required SFF-8639 and USB-C are to be placed along the same short edge of pcb. (CAD drawing pending).
+
+- To exclude the physical insertion of a U.2/SAS/SATA drive into an openCMX compatible backplane (or visa versa), the SFF-8639 connector is to be placed below the Y axis center line of pcb. Whereas the U.2 standard defines it as being placed above the Y center line. See design concept illustrations below for reference. 
 
 - No I/O connectors are to be present along the "long" sides of the PCB. I/O can only be present along the "short" edges of the PCB.
 
@@ -61,11 +65,13 @@ Each openCMX compliant module must conform to the following physical specificati
 
 - No physical device(s) shall be used to trigger a module power event such as Power On, Power Cycle, etc.
 
-- openCMX module must be powered via USB Power Delivery 9v-20v negotiation based on specific needs. Both the USB-C and SFF-8639 connection can accept USB-PD Input.
+- openCMX module must be powered via USB Power Delivery 5v-20v negotiation based on specific needs. Both the USB-C and SFF-8639 connection can accept USB-PD Input.
 
 - Both USB-C and SFF-8639 connections are to support standard USB based Display Alt Mode (pinout TBA)
 
-- An openCMX module total TPD is not to exceed 25w. 
+- An openCMX module total TPD is not to exceed 25w.
+
+- openCMX always operates as a USB and PCIe host device. 
 
 ## Design Concept Illustrations
 - Only required components are shown (excluding SOC)
