@@ -45,7 +45,7 @@ Each openCMX compliant module must conform to the following physical specificati
 
  - Components which generate above 50% of the total heat output of the complete module should be located on the “Thick” side of the PCB. Will be known as “Side A.” SOC, Memory, Etc… Enclosure acts as a heatsink for these components when in high density rack environments.
 
-- Components on the Thin Side, otherwise known as “Side B” cannot exceed the height of the SFF-8639 connector as it protrudes from the PCB. 
+- Components on the Thin Side, otherwise known as “Side B” cannot exceed the height of the SFF-8639 connector as it protrudes from the PCB. Example Amphenol PSAS6M2130011TR SFF-8639 approximately 4.9mm high paired with Amphenol 10185344-M2RHLF M.2 M-Key approximately 2.3mm high = Compliant. 
 
 **Operational Requirements**
 
